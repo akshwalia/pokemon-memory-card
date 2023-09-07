@@ -1,5 +1,6 @@
 
 let data = [];
+let processed = false;
 async function getPokemon() {
     for (let i = 1; i <= 5; i++) {
         const n = Math.floor(Math.random()*900+1);
@@ -14,7 +15,7 @@ async function getPokemon() {
         data.push(newPokemon);
     }
     console.log(data);
-    return data;
+    processed = true;
 }
 
 getPokemon();
