@@ -37,6 +37,10 @@ header {
   color: red;
 }
 
+.header .memo {
+  color: white;
+}
+
 .counter {
   font-size: 17px;
   display: flex;
