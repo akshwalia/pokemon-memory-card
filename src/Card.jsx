@@ -12,7 +12,7 @@ export default function Card({ updateScore, updateHighScore, changeGameOver, pok
     async function getPokemon() {
         let pokemonArray = [];
         for (let i = 1; i <= numberOfPokemons; i++) {
-            const n = Math.floor(Math.random() * 700 + 1);
+            const n = Math.floor(Math.random() * 150 + 1);
             const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + n);
             const result = await response.json();
 
