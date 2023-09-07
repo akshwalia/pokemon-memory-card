@@ -11,6 +11,7 @@ export default function Card({ updateScore, updateHighScore, changeGameOver, pok
 
     async function getPokemon() {
         let pokemonArray = [];
+        let pokemonNameArray = [];
         for (let i = 1; i <= numberOfPokemons; i++) {
             const n = Math.floor(Math.random() * 150 + 1);
             const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + n);
@@ -22,8 +23,10 @@ export default function Card({ updateScore, updateHighScore, changeGameOver, pok
                 id: `${i}`
             }
 
-            if (!pokemonArray.includes(newPokemon))
+            if (!pokemonNameArray.includes(newPokemon.name)) {
+                pokemonNameArray.push(newPokemon.name);
                 pokemonArray.push(newPokemon);
+            }
             else
                 i--;
         }

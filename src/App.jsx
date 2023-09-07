@@ -34,6 +34,8 @@ function App() {
     if (highScore < score)
       setHighScore(score);
     setScore(0);
+    if(hasWon)
+      setNumberOfPokemons(numberOfPokemons+2);
     setHasWon(false);
     setGameOver(false);
     setData([]);

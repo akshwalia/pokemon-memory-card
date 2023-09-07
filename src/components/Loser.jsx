@@ -9,7 +9,7 @@ export default function Winner({score,resetGame}) {
                 <img src={lossGIF} alt="Happy Pikachu GIF" width='250px' />
                 <div className="finalscore">Your final score is : {score}</div>
                 <button type="button" onClick={resetGame}>TRY AGAIN?</button>
-                <button type="button">GIT REPO</button>
+                <a href="https://github.com/akshwalia/pokemon-memory-card" target='_blank' rel='noreferrer'>GIT REPO</a>
             </div>
         </div>
     )
