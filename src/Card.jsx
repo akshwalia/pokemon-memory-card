@@ -40,6 +40,7 @@ export default function Card({ updateScore, updateHighScore, changeGameOver, pok
         clickedCards=[];
     }, [reset]);
 
+
     function handleClick(e) {
         if (!clickedCards.includes(e.currentTarget.id)) {
             clickedCards.push(e.currentTarget.id);
