@@ -1,0 +1,14 @@
+.cardcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px,1fr));
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    padding: 30px 10px;
+    background-color: gray;
+    border-radius: 10px;
+}
+.card:hover {
+    cursor: pointer;
+}
