@@ -30,7 +30,6 @@ export default function Card({ updateScore, updateHighScore, changeGameOver, pok
             else
                 i--;
         }
-        console.log(pokemonArray)
         setData(pokemonArray);
         setFetched(true);
     }
@@ -46,7 +45,6 @@ export default function Card({ updateScore, updateHighScore, changeGameOver, pok
             clickedCards.push(e.currentTarget.id);
 
             updateScore();
-            console.log(clickedCards);
             shuffleCards();
         }
         else {
