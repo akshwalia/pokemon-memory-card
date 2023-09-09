@@ -9,7 +9,7 @@ import Loser from './components/Loser'
 
 function App() {
   const [score, setScore] = useState(0);
-  const [highScore, setHighScore] = useState(0);
+  const [highScore, setHighScore] = useState(localStorage.getItem('highScore'));
   const [hasWon, setHasWon] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [data, setData] = useState([]);
@@ -17,22 +17,26 @@ function App() {
   const [numberOfPokemons, setNumberOfPokemons] = useState(5);
 
   function updateScore() {
-    if (score == numberOfPokemons-1)
-      setHasWon(true);
-
     setScore(score + 1);
-
+    if (score == numberOfPokemons-1) {
+      setHighScore(score+1);
+      localStorage.setItem('highScore',score+1);
+      setHasWon(true);
+    }
   }
 
   function updateHighScore() {
-    if (highScore < score)
+    if (highScore < score) {
       setHighScore(score);
-
+      localStorage.setItem('highScore',score);
+    }
   }
 
   function resetGame() {
-    if (highScore < score)
+    if (highScore < score) {
       setHighScore(score);
+      localStorage.setItem('highScore',score)
+    }
     setScore(0);
     if(hasWon)
       setNumberOfPokemons(numberOfPokemons+2);

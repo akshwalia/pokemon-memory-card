@@ -49,9 +49,8 @@ export default function Card({ updateScore, updateHighScore, changeGameOver, pok
             shuffleCards();
         }
         else {
-            changeGameOver();
             updateHighScore();
-
+            changeGameOver();
         }
     }
 
@@ -65,7 +64,7 @@ export default function Card({ updateScore, updateHighScore, changeGameOver, pok
                 shuffled.push(pokemonData[ran]);
             }
         }
-        console.log(shuffled);
+    
         setData(shuffled);
     }
 
